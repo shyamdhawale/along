@@ -84,7 +84,7 @@ function appendMediaElement(asset) {
     mediaEl =  '<img id="lp-preview-image" src="' + asset.contentUrl + '">';
     previewContainer.innerHTML = mediaEl;
     // image: go to the next media after 5 seconds
-    console.log(asset.timer);
+    //console.log(asset.timer);
     setTimeout("changeMedia()", asset.timer);
     // added another json
   } else if(asset.source == "rss"){
@@ -93,7 +93,7 @@ function appendMediaElement(asset) {
     previewContainer.replaceChild(ele,previewContainer.children[0]); 
     // mediaEl = '<h1 id="lp-preview-rss"> ' + asset.title +'<h1>'
     // previewContainer.innerHTML = mediaEl;
-    console.log(asset);
+    //console.log(asset);
     setTimeout("changeMedia()", 10000);
     //
   } else if(asset.mediaType == "VIDEO") {
@@ -104,8 +104,8 @@ function appendMediaElement(asset) {
     previewContainer.innerHTML = mediaEl;
     var myVideo = document.querySelector('#lp-preview-video')
     myVideo.onloadedmetadata = function() {
-      console.log('metadata loaded!');
-      console.log(this.duration);//this refers to myVideo
+      //console.log('metadata loaded!');
+      //console.log(this.duration);//this refers to myVideo
     };
       
     // video: go to the next media when the video ends
