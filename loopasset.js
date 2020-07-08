@@ -1,6 +1,6 @@
 var loopAssets = [
   { contentUrl: "http://lorempixel.com/200/200/abstract/", contentType: "image/jpg", mediaType:"IMAGE", timer: 7000},
-  //{ contentUrl: "http://www.w3schools.com/html/mov_bbb.mp4", contentType: "video/mp4", mediaType: "VIDEO", timer: 7000},
+  { contentUrl: "http://www.w3schools.com/html/mov_bbb.mp4", contentType: "video/mp4", mediaType: "VIDEO", timer: 7000},
   { contentUrl: "http://lorempixel.com/200/200/people/", contentType: "image/jpg", mediaType:"IMAGE", timer: 5000},
   //{ contentUrl: "MP_POLICE-MASK-KHATARO.MP4", contentType: "video/mp4", mediaType:"VIDEO", timer: 5000},
   //{ contentUrl: "MP_POLICE-MASK-KHATARO.MP4", contentType: "video/mp4", mediaType:"VIDEO", timer: 5000},
@@ -97,7 +97,7 @@ function appendMediaElement(asset) {
     setTimeout("changeMedia()", 10000);
     //
   } else if(asset.mediaType == "VIDEO") {
-    mediaEl = "<video id='lp-preview-video' autoplay muted >";
+    mediaEl = "<video id='lp-preview-video' autoplay muted controls >";
     mediaEl += "<source src='"+ asset.contentUrl + "' type='" + asset.contentType + "'>";
     mediaEl += "</video>";
     //previewContainer.html(mediaEl);
