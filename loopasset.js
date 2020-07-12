@@ -56,7 +56,7 @@ var loopAssets1 = [
 ];
   var rssdata = null;
   function test (){
-  $.getJSON("/news-rss.json", function( data ) {
+  $.getJSON("/along/news-rss.json", function( data ) {
     rssdata = data;
   // $.each( data, function(i, item ) {
   //   loopAssets.push(data[i]);
